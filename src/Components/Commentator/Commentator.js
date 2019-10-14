@@ -27,8 +27,8 @@ export default function Commentator(props) {
                         <h2 className='network'>
                             {props.commentator.network}
                         </h2>
-                        <a className='social-link' href={props.commentator.twitter}>Twitter</a>
-                        <a className='social-link' href={props.commentator.instagram}>Instagram</a>
+                        <a target='_blank' className='social-link' href={props.commentator.twitter}>Twitter</a>
+                        <a target='_blank' className='social-link' href={props.commentator.instagram}>Instagram</a>
                         <h3>
                             About:
                         </h3>
@@ -47,35 +47,6 @@ export default function Commentator(props) {
                 </li>
             )}
             </ul>
-            
-
-
-
-                {/* <div className="take-object takes">
-                    <h2>
-                        10/13/19 - The Celtics will win by 25 points. <span class="false">False</span>
-                    </h2>
-                </div>
-                <div className="take-object takes">
-                    <h2>
-                        10/10/19 - The Patriots will beat the Giants <span class="true">True</span>
-                    </h2>
-                </div>
-                <div className="take-object takes">
-                    <h2>
-                        07/31/19 - Kyrie Irving will leave the Celtics. <span class="true">True</span>
-                    </h2>
-                </div>
-                <div className="take-object takes">
-                    <h2>
-                        06/01/19 - The Raptors will beat the Warriors in the Finals <span class="true">True</span>
-                    </h2>
-                </div>
-                <div className="take-object takes">
-                    <h2>
-                        06/01/19 - Kawhi will win NBA finals MVP<span class="true">True</span>
-                    </h2>
-                </div> */}
             </section>
         </div>
       </main>
