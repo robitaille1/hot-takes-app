@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans",
+  sans-serif; 
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.container {
+  padding: 0 100px;
+  text-align: center;
+}
+
+button {
+  border-radius: 5px;
+}
+
+.true {
+  color: green;
+}
+
+.false {
+  color: red;
+}
+
+.home-main {
+    display: flex;
+  }
+  
+  .content {
+    margin: 10px auto;
+    background-color: grey;
+    height: 300px;
+    width: 500px;
+    padding: 20px;
+  }
+  
+  .new-btn {
+    display: inline;
+    margin: 30px 200px;
+    border: none;
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+  }
+  
+  .take-object {
+    font-size: 10px;
+    background-color: white;
+  }
+  
+  .commentator {
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    background-color: white;
+    margin: 5px;
+  }
+  
+  .section-title {
+    margin-top: 0;
+  }

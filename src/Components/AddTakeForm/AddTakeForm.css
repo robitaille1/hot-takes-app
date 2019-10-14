@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans",
+  sans-serif; 
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.container {
+  padding: 0 100px;
+  text-align: center;
+}
+
+button {
+  border-radius: 5px;
+}
+
+.form-section {
+    display: block;
+  }
+  
+.form-btn {
+    padding: 5px 10px;
+}
