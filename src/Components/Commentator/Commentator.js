@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import './Commentator.css'
 
@@ -36,6 +37,9 @@ export default function Commentator(props) {
                             {props.commentator.about}
                         </p>
                         <h4 className="score">Hot Takes Score: <span className="medium">{calculateScore()}</span></h4>
+                        <Link to='/add-take' style={{ textDecoration: 'none' }}>
+                            <button className="new-tk-btn">Add New Take</button>
+                        </Link>
                     </div>
                 </div>
             </section>

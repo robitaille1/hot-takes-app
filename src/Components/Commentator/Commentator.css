@@ -20,6 +20,10 @@ button {
   border-radius: 5px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 li {
   list-style: none;
 }
@@ -73,4 +77,20 @@ ul {
 
 .network {
   margin-bottom: 20px;
+}
+
+.new-tk-btn {
+  margin: 5px 5px;
+  display: inline;
+  border: none;
+  color: white;
+  background-color: rgb(252, 0, 0);
+  border: 1px solid red;
+  padding: 10px 20px;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.new-tk-btn:hover {
+  opacity: 1;
 }
