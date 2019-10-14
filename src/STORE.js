@@ -71,6 +71,7 @@ export default {
         "take": "Patrick Mahomes will win the MVP for the 2018 season.",
         "date": "08/01/18",
         "commentatorId": "b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1",
+        "commentator": "Stephen A. Smith",
         "correct": "TRUE"
       },
       // {
