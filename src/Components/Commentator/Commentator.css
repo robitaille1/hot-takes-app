@@ -20,6 +20,14 @@ button {
   border-radius: 5px;
 }
 
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
 .true {
   color: green;
 }
@@ -33,19 +41,36 @@ button {
     font-size: 14px;
     color: antiquewhite;
     border-radius: 10px;
-  }
+    background-color: rgba(58, 56, 56, 0.336);
+}
   
-  .medium {
-    color: greenyellow;
-  }
+.medium {
+  color: greenyellow;
+}
   
-  .takes {
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 0px;
-    font-size: 13px;
-  }
-  
-  .score {
-    font-size: 24px;
-  }
+.takes {
+  border: 1px solid rgba(170, 168, 168, 0.507);
+  border-radius: 10px;
+  margin: 3px;
+  font-size: 13px;
+}
+
+.score {
+  font-size: 24px;
+  margin: 5px auto;
+}
+
+.social-link {
+  margin: 10px 5px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color:rgba(0, 0, 0, 0.384);
+}
+
+.network {
+  margin-bottom: 20px;
+}

@@ -5,12 +5,12 @@ import './LandingPage.css'
 function LandingPage() {
     return (
       <main className='LandingPage'>
-        <div class="landing container">
-            <div class="center">
-                <h1 class="landing-title">Hot Takes</h1>
-                <p class="landing-content">An app to track takes made by sports commentators</p>
+        <div className="landing container">
+            <div className="center">
+                <h1 className="landing-title">Hot Takes</h1>
+                <p className="landing-content">An app to track takes made by sports commentators</p>
                 <Link to='/home'>
-                    <button class="landing-button">
+                    <button className="landing-button">
                         Home
                     </button>
                 </Link>

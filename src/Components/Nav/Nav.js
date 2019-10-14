@@ -6,8 +6,8 @@ function Nav() {
     return (
       <main className='Nav'>
         <nav>
-            <Link to='/home'>
-                <h1 class="nav-title">Hot Takes</h1>
+            <Link to='/home' style={{ textDecoration: 'none' }}>
+                <h1 className="nav-title">Hot Takes</h1>
             </Link>
             
         </nav>

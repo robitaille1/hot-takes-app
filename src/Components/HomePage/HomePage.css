@@ -11,13 +11,29 @@ body {
   line-height: 1.5;
 }
 
-.container {
-  padding: 0 100px;
-  text-align: center;
+h2 {
+  margin: 5px;
 }
 
 button {
   border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+ul {
+  margin-top: 0;
+}
+
+.link:visited {
+  color: #444;
+}
+
+.container {
+  padding: 0 100px;
+  text-align: center;
 }
 
 .true {
@@ -30,14 +46,17 @@ button {
 
 .home-main {
     display: flex;
+    border-radius: 10px;
   }
   
   .content {
-    margin: 10px auto;
-    background-color: grey;
-    height: 300px;
+    margin: 5px auto;
+    min-height: 300px;
     width: 500px;
     padding: 20px;
+    border: 1px solid rgba(170, 168, 168, 0.507);
+    border-radius: 10px;
+    overflow: hidden;
   }
   
   .new-btn {
@@ -45,23 +64,35 @@ button {
     margin: 30px 200px;
     border: none;
     color: white;
-    background-color: red;
+    background-color: rgb(252, 0, 0);
+    border: 1px solid red;
     padding: 10px 20px;
+    opacity: 0.6;
+    transition: 0.5s;
+  }
+
+  .new-btn:hover {
+    opacity: 1;
   }
   
   .take-object {
     font-size: 10px;
     background-color: white;
+    border: 1px solid rgba(170, 168, 168, 0.507);
+    border-radius: 5px;
+    margin-top: 3px
   }
   
   .commentator {
     display: inline-block;
-    height: 75px;
-    width: 75px;
+    min-height: 75px;
+    width: 90px;
     background-color: white;
     margin: 5px;
+    border: 1px solid rgba(170, 168, 168, 0.507);
   }
   
   .section-title {
     margin-top: 0;
+    margin-bottom: 5px;
   }

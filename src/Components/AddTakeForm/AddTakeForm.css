@@ -11,6 +11,11 @@ body {
   line-height: 1.5;
 }
 
+fieldset {
+  border: 1px solid rgba(170, 168, 168, 0.507);
+  border-radius: 10px;
+}
+
 .container {
   padding: 0 100px;
   text-align: center;
@@ -22,8 +27,20 @@ button {
 
 .form-section {
     display: block;
-  }
-  
+}
+
 .form-btn {
-    padding: 5px 10px;
+  display: inline;
+  margin: 30px 200px;
+  border: none;
+  color: white;
+  background-color: rgb(252, 0, 0);
+  border: 1px solid red;
+  padding: 10px 20px;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.form-btn:hover {
+  opacity: 1;
 }
