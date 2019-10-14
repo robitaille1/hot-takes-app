@@ -11,11 +11,11 @@ function AddCommentatorForm() {
             <form>
                 <fieldset>
                     <div className="form-section">
-                        <label for="date">Name:</label>
+                        <label htmlFor="date">Name:</label>
                         <input type="text" name="name" id="name" />
                     </div>
                     <div className="form-section">
-                        <label for="commentator">Network:</label>
+                        <label htmlFor="commentator">Network:</label>
                         <select name="Network" id="Network">
                             <option value="ESPN">ESPN</option>
                             <option value="Barstool">Barstool Sports</option>
@@ -25,15 +25,15 @@ function AddCommentatorForm() {
                         </select>
                     </div>
                     <div className="form-section">
-                        <label for="twitter">Twitter:</label>
+                        <label htmlFor="twitter">Twitter:</label>
                         <input type="text" />
                     </div>
                     <div className="form-section">
-                        <label for="instagram">Instagram:</label>
+                        <label htmlFor="instagram">Instagram:</label>
                         <input type="text" />
                     </div>
                     <div className="form-section">
-                        <label className="about-label"for="about">About:</label>
+                        <label className="about-label" htmlFor="about">About:</label>
                         <textarea name="about" id="about" cols="30" rows="10"></textarea>
                     </div>
                     <button className="form-btn">Submit</button>

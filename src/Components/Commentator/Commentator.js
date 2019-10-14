@@ -27,8 +27,8 @@ export default function Commentator(props) {
                         <h2 className='network'>
                             {props.commentator.network}
                         </h2>
-                        <a target='_blank' className='social-link' href={props.commentator.twitter}>Twitter</a>
-                        <a target='_blank' className='social-link' href={props.commentator.instagram}>Instagram</a>
+                        <a target='_blank' rel="noopener noreferrer" className='social-link' href={props.commentator.twitter}>Twitter</a>
+                        <a target='_blank' rel="noopener noreferrer" className='social-link' href={props.commentator.instagram}>Instagram</a>
                         <h3>
                             About:
                         </h3>
