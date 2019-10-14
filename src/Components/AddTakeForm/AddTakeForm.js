@@ -11,23 +11,32 @@ function AddTakeForm() {
             <form>
                 <fieldset>
                     <div className="form-section">
-                        <label for="date">Date:</label>
+                        <label htmlFor="date">Date:</label>
                         <input type="date" name="date" id="date" />
                     </div>
                     <div className="form-section">
-                        <label for="commentator">Select a Commentator:</label>
-                        <select nameName="commentator" id="commentator">
+                        <label htmlFor="commentator">Select a Commentator:</label>
+                        <select name="commentator" id="commentator">
                             <option value="Bill">Bill Simmons</option>
                             <option value="Dave">Dave Portnoy</option>
                             <option value="Stephen">Stephen A. Smith</option>
                         </select>
                     </div>
                     <div className="form-section">
-                        <label className="take-label"for="take">Take Information:</label>
+                        <label className="take-label"htmlFor="take">Take Information:</label>
                         <textarea name="take" id="take" cols="30" rows="10"></textarea>
                     </div>
                     <div className="form-section">
-                        <label for="correct">Correct or Incorrect?</label>
+                        <label htmlFor="sport">Sport:</label>
+                        <select name="sport" id="Sport">
+                            <option value="NBA">NBA</option>
+                            <option value="NFL">NFL</option>
+                            <option value="MLB">MLB</option>
+                            <option value="NHL">NHL</option>
+                        </select>
+                    </div>
+                    <div className="form-section">
+                        <label htmlFor="correct">Correct or Incorrect?</label>
                         <select name="correct" id="correct">
                             <option value="true">True</option>
                             <option value="false">False</option>

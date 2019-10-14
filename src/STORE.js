@@ -32,7 +32,8 @@ export default {
         "date": "10/13/19",
         "commentatorId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
         "commentator": "Bill Simmons",
-        "correct": "FALSE"
+        "correct": "FALSE",
+        "sport": "NBA"
       },
       {
         "id": "d26e0034-ffaf-11e8-8eb2-f2801f1b9fd1",
@@ -40,7 +41,8 @@ export default {
         "date": "10/13/19",
         "commentatorId": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
         "commentator": "Bill Simmons",
-        "correct": "FALSE"
+        "correct": "FALSE",
+        "sport": "NFL"
       },
       {
         "id": "d26e01a6-ffaf-11e8-8eb2-f2801f1b9fd1",
@@ -48,7 +50,8 @@ export default {
         "date": "10/10/19",
         "commentatorId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
         "commentator": "Dave Portnoy",
-        "correct": "TRUE"
+        "correct": "TRUE",
+        "sport": "NFL"
       },
       {
         "id": "d26e0570-ffaf-11e8-8eb2-f2801f1b9fd1",
@@ -56,7 +59,8 @@ export default {
         "date": "07/31/19",
         "commentatorId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
         "commentator": "Bill Simmons",
-        "correct": "TRUE"
+        "correct": "TRUE",
+        "sport": "NBA"
       },
       {
         "id": "d26e0714-ffaf-11e8-8eb2-f2801f1b9fd1",
@@ -64,7 +68,8 @@ export default {
         "date": "06/01/19",
         "commentatorId": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
         "commentator": "Bill Simmons",
-        "correct": "TRUE"
+        "correct": "TRUE",
+        "sport": "NBA"
       },
       {
         "id": "d26e0980-ffaf-11e8-8eb2-f2801f1b9fd1",
@@ -72,7 +77,8 @@ export default {
         "date": "08/01/18",
         "commentatorId": "b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1",
         "commentator": "Stephen A. Smith",
-        "correct": "TRUE"
+        "correct": "TRUE",
+        "sport": "NFL"
       },
       // {
       //   "id": "d26e0aac-ffaf-11e8-8eb2-f2801f1b9fd1",
