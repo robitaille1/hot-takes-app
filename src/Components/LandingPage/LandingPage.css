@@ -12,14 +12,11 @@ body {
   }
 
   .center {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 150px;
   }
   
   .landing {
-    height: 100vh;
+    height: 80h;
     width: 100vw;
   }
   
@@ -40,4 +37,12 @@ body {
 
   .landing-button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .app-info {
+    margin-top: 80px;
+    background: rgb(83, 82, 82);
+    color: white;
+    border-top: 1px solid rgb(248, 122, 122);
+    padding: 25px 150px;
   }

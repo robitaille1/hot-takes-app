@@ -11,7 +11,7 @@ export default {
       {
         "id": "b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1",
         "name": "Dave Portnoy",
-        "network": "Barstool Sports",
+        "network": "Dave Portnoy",
         "twitter": "https://twitter.com/stoolpresidente",
         "instagram": "https://www.instagram.com/stoolpresidente/",
         "about": "David Portnoy is an American internet celebrity, blogger, and founder of the satirical sports and pop culture blog Barstool Sports."
