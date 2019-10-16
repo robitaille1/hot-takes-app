@@ -66,14 +66,15 @@ renderCommentatorRoutes() {
       <>
           {['/commentators/:commentatorId'].map(path => (
                 <Route
+                    exact
                     key={path}
                     path={path}
                     render={routeProps => {
-                        const {commentatorId} = routeProps.match.params;
+                        const {commentatorid} = routeProps.match.params;
                         const commentatorInfo = findCommentator(commentators, commentatorId)
                         const takesForCommentator = getTakesForCommentator(
                             takes,
-                            commentatorId
+                            commentatorid
                         );
                         return (
                             <Commentator
