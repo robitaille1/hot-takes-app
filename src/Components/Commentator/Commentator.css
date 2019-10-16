@@ -84,6 +84,22 @@ ul {
   display: inline;
   border: none;
   color: white;
+  background-color: rgb(6, 145, 59);
+  border: 1px solid rgba(6, 145, 59);
+  padding: 10px 20px;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.new-tk-btn:hover {
+  opacity: 1;
+}
+
+.comm-delete-btn {
+  margin: 5px 5px;
+  display: inline;
+  border: none;
+  color: white;
   background-color: rgb(252, 0, 0);
   border: 1px solid red;
   padding: 10px 20px;
@@ -91,6 +107,6 @@ ul {
   transition: 0.5s;
 }
 
-.new-tk-btn:hover {
+.comm-delete-btn:hover {
   opacity: 1;
 }
