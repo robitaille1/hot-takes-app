@@ -6,13 +6,36 @@ import HomePage from './Components/HomePage/HomePage'
 import AddTakeForm from './Components/AddTakeForm/AddTakeForm'
 import AddCommentatorForm from './Components/AddCommentatorForm/AddCommentatorForm'
 import Commentator from './Components/Commentator/Commentator';
-import STORE from './STORE'
+// import ApiContext from '../src/ApiContext'
+import config from '../src/config'
+// import STORE from './STORE'
 
 class App extends Component {
   state = {
-    commentators: STORE.commentators,
-    takes: STORE.takes
+    commentators: [],
+    takes: []
   };
+
+  componentDidMount() {
+    Promise.all([
+        fetch(`${config.API_ENDPOINT}/takes`),
+        fetch(`${config.API_ENDPOINT}/commentators`)
+    ])
+        .then(([takesRes, commentatorsRes]) => {
+            if (!takesRes.ok)
+                return takesRes.json().then(e => Promise.reject(e));
+            if (!commentatorsRes.ok)
+                return commentatorsRes.json().then(e => Promise.reject(e));
+
+            return Promise.all([takesRes.json(), commentatorsRes.json()]);
+        })
+        .then(([takes, commentators]) => {
+            this.setState({takes, commentators});
+        })
+        .catch(error => {
+            console.error({error});
+        });
+}
 
 
   renderRoutes() {
@@ -38,12 +61,11 @@ class App extends Component {
 }
 
 renderCommentatorRoutes() {
-  const {takes, commentators} = this.state;
+  const { takes, commentators } = this.state;
   return (
       <>
-          {['/commentator/:commentatorId'].map(path => (
+          {['/commentators/:commentatorId'].map(path => (
                 <Route
-                    exact
                     key={path}
                     path={path}
                     render={routeProps => {

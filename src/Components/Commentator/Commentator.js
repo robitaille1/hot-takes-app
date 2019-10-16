@@ -14,7 +14,7 @@ export default function Commentator(props) {
         }
         return (takesCorrect/takeTotal)*100
     }
-
+    
     return (
       <main className='Commentator'>
           <Nav />
