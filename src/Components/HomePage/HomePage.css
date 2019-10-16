@@ -94,6 +94,7 @@ ul {
     background-color: white;
     margin: 5px;
     border: 1px solid rgba(170, 168, 168, 0.507);
+    border-radius: 5px;
   }
   
   .section-title {
