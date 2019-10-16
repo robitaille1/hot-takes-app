@@ -1,14 +1,12 @@
 import React, { Component }from 'react'
 import { Route } from 'react-router-dom'
-import {getTakesForCommentator, findCommentator} from '../src/takes-helpers';
 import LandingPage from './Components/LandingPage/LandingPage'
 import HomePage from './Components/HomePage/HomePage'
 import AddTakeForm from './Components/AddTakeForm/AddTakeForm'
 import AddCommentatorForm from './Components/AddCommentatorForm/AddCommentatorForm'
-import Commentator from './Components/Commentator/Commentator';
-// import ApiContext from '../src/ApiContext'
+import CommentatorPage from './Components/CommentatorPage/CommentatorPage';
+import ApiContext from '../src/ApiContext'
 import config from '../src/config'
-// import STORE from './STORE'
 
 class App extends Component {
   state = {
@@ -35,11 +33,20 @@ class App extends Component {
         .catch(error => {
             console.error({error});
         });
-}
+ }
+
+ handleDeleteCommentator = commentatorId => {
+     this.setState({
+         commentators: this.state.commentators.filter(commentator => commentator.id !== commentatorId )
+     })
+ }
+
+
+
+
 
 
   renderRoutes() {
-    const {takes, commentators} = this.state;
     return (
         <>
             {['/home'].map(path => (
@@ -47,13 +54,7 @@ class App extends Component {
                       exact
                       key={path}
                       path={path}
-                      render={routeProps => (
-                          <HomePage
-                              commentators={commentators}
-                              takes={takes}
-                              {...routeProps}
-                          />
-                      )}
+                      component={HomePage}
                   />
               ))}
         </>
@@ -61,7 +62,6 @@ class App extends Component {
 }
 
 renderCommentatorRoutes() {
-  const { takes, commentators } = this.state;
   return (
       <>
           {['/commentators/:commentatorId'].map(path => (
@@ -69,21 +69,7 @@ renderCommentatorRoutes() {
                     exact
                     key={path}
                     path={path}
-                    render={routeProps => {
-                        const {commentatorid} = routeProps.match.params;
-                        const commentatorInfo = findCommentator(commentators, commentatorId)
-                        const takesForCommentator = getTakesForCommentator(
-                            takes,
-                            commentatorid
-                        );
-                        return (
-                            <Commentator
-                                {...routeProps}
-                                takes={takesForCommentator}
-                                commentator={commentatorInfo}
-                            />
-                        );
-                    }}
+                    component={CommentatorPage}
                 />
             ))}
       </>
@@ -91,16 +77,22 @@ renderCommentatorRoutes() {
 }
 
 
-
   render() {
+    const value = {
+        takes: this.state.takes,
+        commentators: this.state.commentators,
+        deleteCommentator: this.handleDeleteCommentator
+    };
     return (
-      <main className='App'>
-        <Route exact path='/' component={LandingPage}/>
-        {this.renderRoutes()}
-        <Route path='/add-take' component={AddTakeForm}/>
-        <Route path='/add-commentator' component={AddCommentatorForm}/>
-        {this.renderCommentatorRoutes()}
-      </main>
+        <ApiContext.Provider value={value}>
+            <main className='App'>
+                <Route exact path='/' component={LandingPage}/>
+                {this.renderRoutes()}
+                <Route path='/add-take' component={AddTakeForm}/>
+                <Route path='/add-commentator' component={AddCommentatorForm}/>
+                {this.renderCommentatorRoutes()}
+            </main>
+        </ApiContext.Provider>
     );
   }
 }
