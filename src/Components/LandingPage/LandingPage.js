@@ -18,7 +18,12 @@ function LandingPage() {
         </div>
         <div className="app-info">
             <h2>The Rotton Tomatos of sports commentary.</h2>
-            <p>Sports Commentators, have many hot takes, but there is no where keep track of whether they are right or wrong. Hot Takes is an app to keep track of what commentators say, and show who is the most reliable. Add a commentator or add a take to a commentator's hot takes score update.</p>
+            <p>
+                Sports Commentators have many hot takes, but there is no where keep track of whether they are right or wrong.
+            </p>
+            <p>
+                Hot Takes is an app to keep track of what commentators say, and show who is the most reliable. Add a commentator or add a take to a commentator to see their Hot Takes score update.
+            </p>
             </div>
       </main>
     );
