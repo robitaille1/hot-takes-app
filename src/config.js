@@ -1,5 +1,6 @@
 module.exports = {
     PORT: process.env.PORT || 8080,
-    API_BASE_URL: "https://arcane-tundra-35828.herokuapp.com/api"
+    API_ENDPOINT: process.env.REACT_APP_API_BASE_URL ||
+      "http://localhost:3000/api"
   };
   
