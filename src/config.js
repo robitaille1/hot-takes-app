@@ -1,5 +1,5 @@
 
 export default {
-      API_ENDPOINT: 'https://arcane-tundra-35828.herokuapp.com/api'
+      API_ENDPOINT: process.env.REACT_APP_API_BASE_URL,
   }
   
