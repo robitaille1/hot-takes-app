@@ -7,7 +7,14 @@ import './AddTakeForm.css'
 
 
 export default class AddTakeForm extends Component {
+    static defaultProps = {
+      history: {
+        push: () => { }
+      },
+    }
+
     static contextType = ApiContext;
+    
     handleSubmit = (event) => {
         event.preventDefault()
         const { commentators=[] } = this.context
@@ -34,6 +41,7 @@ export default class AddTakeForm extends Component {
           })
           .then(take => {
             this.context.addTake(take)
+            this.props.history.push(`/commentators/${take.commentatorid}`)
           })
           .catch(error => {
             console.error({ error })

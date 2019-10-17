@@ -13,11 +13,11 @@ export default class CommentatorPage extends React.Component {
   static contextType = ApiContext
 
   handleDeleteCommentator = commentatorId => {
-    this.props.history.push(`/`)
+    this.props.history.push(`/home`)
   }
 
   handleDeleteTake = commentatorId => {
-    this.props.history.push(`/`)
+    this.props.history.push(`/commentators/${commentatorId}`)
   }
 
   render() {

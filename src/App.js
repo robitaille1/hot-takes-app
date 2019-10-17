@@ -35,53 +35,76 @@ class App extends Component {
         });
  }
 
- handleDeleteCommentator = commentatorId => {
-     this.setState({
-         commentators: this.state.commentators.filter(commentator => commentator.id !== commentatorId )
-     })
- }
+    handleAddCommentator = commentator => {
+        this.setState({
+        commentators: [
+            ...this.state.commentators,
+            commentator
+        ]
+        })
+    }
+
+    handleDeleteCommentator = commentatorId => {
+        this.setState({
+            commentators: this.state.commentators.filter(commentator => commentator.id !== commentatorId )
+        })
+    }
+
+    handleAddTake = take => {
+        this.setState({
+            takes: [
+                ...this.state.takes,
+                take
+            ]
+        })
+    }
+
+    handleDeleteTake = takeId => {
+        this.setState({
+            takes: this.state.takes.filter(take => take.id !== takeId )
+        })
+    }
 
 
+    renderRoutes() {
+        return (
+            <>
+                {['/home'].map(path => (
+                    <Route
+                        exact
+                        key={path}
+                        path={path}
+                        component={HomePage}
+                    />
+                ))}
+            </>
+        );
+    }
 
-
-
-
-  renderRoutes() {
+    renderCommentatorRoutes() {
     return (
         <>
-            {['/home'].map(path => (
-                  <Route
-                      exact
-                      key={path}
-                      path={path}
-                      component={HomePage}
-                  />
-              ))}
+            {['/commentators/:commentatorId'].map(path => (
+                    <Route
+                        exact
+                        key={path}
+                        path={path}
+                        component={CommentatorPage}
+                    />
+                ))}
         </>
-    );
-}
-
-renderCommentatorRoutes() {
-  return (
-      <>
-          {['/commentators/:commentatorId'].map(path => (
-                <Route
-                    exact
-                    key={path}
-                    path={path}
-                    component={CommentatorPage}
-                />
-            ))}
-      </>
-  );
-}
+        );
+    }
 
 
   render() {
     const value = {
         takes: this.state.takes,
         commentators: this.state.commentators,
-        deleteCommentator: this.handleDeleteCommentator
+        addCommentator: this.handleAddCommentator,
+        deleteCommentator: this.handleDeleteCommentator,
+        addTake: this.handleAddTake,
+        deleteTake: this.handleDeleteTake
     };
     return (
         <ApiContext.Provider value={value}>

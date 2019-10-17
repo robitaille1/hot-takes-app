@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import { format } from 'date-fns'
 import ApiContext from '../../ApiContext'
 import config from '../../config'
 import Nav from '../Nav/Nav'
@@ -12,6 +11,7 @@ export default class Commentator extends React.Component {
     static defaultProps ={
         onDeleteCommentator: () => {},
       }
+      
       static contextType = ApiContext;
 
 
@@ -27,12 +27,11 @@ export default class Commentator extends React.Component {
         })
         .then(res => {
             if (!res.ok)
-                return res.json().then(e => Promise.reject(e))
-            return res.json()
+                return res.json().then(event => console.log(event))
         })
         .then(() => {
-            this.context.deleteNote(commentatorId)
-            this.props.onDeleteNote(commentatorId)
+            this.context.deleteCommentator(commentatorId)
+            this.props.onDeleteCommentator(commentatorId)
         })
         .catch(error => {
             console.error({ error })
@@ -47,7 +46,12 @@ export default class Commentator extends React.Component {
                 takesCorrect++;
             };
         }
-        return (takesCorrect/takeTotal)*100;
+        const score = (takesCorrect/takeTotal)*100;
+        if(isNaN(score)){
+            return 0
+        } else {
+            return score
+        }
     }
 
     render() {

@@ -11,7 +11,6 @@ class CommentatorTakes extends Component {
     handleDeleteTake = e => {
         e.preventDefault()
         const takeId = this.props.take.id
-
         fetch(`${config.API_ENDPOINT}/takes/${takeId}`, {
             method: 'DELETE',
             headers: {
@@ -20,8 +19,7 @@ class CommentatorTakes extends Component {
         })
             .then(res => {
                 if (!res.ok)
-                    return res.json().then(e => Promise.reject(e))
-                return res.json()
+                    return res.json().then(event => console.log(event))
             })
             .then(() => {
                 this.context.deleteTake(takeId)

@@ -6,6 +6,11 @@ import './AddCommentatorForm.css'
 
 
 export default class AddCommentatorForm extends Component {
+    static defaultProps = {
+        history: {
+          push: () => { }
+        },
+    }
     static contextType = ApiContext
 
     submitForm = (event) => {
@@ -17,7 +22,6 @@ export default class AddCommentatorForm extends Component {
             instagram: event.target['instagram'].value,
             about: event.target['about'].value,
         }
-        console.log(newCommentator)
         fetch(`${config.API_ENDPOINT}/commentators`, {
             method: 'POST',
             headers: {
@@ -25,13 +29,14 @@ export default class AddCommentatorForm extends Component {
             },
             body: JSON.stringify(newCommentator),
         })
-            .then(response => {
-                if (response.ok)
-                    // return response.json().then(e => Promise.reject(e))
-                    return response.json().then(e => console.log(e))
+            .then(res => {
+                if (!res.ok)
+                return res.json().then(event => Promise.reject(event))
+                return res.json()
             })
             .then(commentator => {
                 this.context.addCommentator(commentator)
+                this.props.history.push(`/home`)
             })
             .catch(error => {
                 console.error({ error })
