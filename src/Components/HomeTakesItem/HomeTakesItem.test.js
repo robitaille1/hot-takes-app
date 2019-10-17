@@ -1,26 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom';
-import Commentator from './Commentator'
+import HomeTakesItem from './HomeTakesItem'
 
-describe(`Commentator Component`, () => {
-  const commentator = [
+describe(`HomeTakesItem Component`, () => {
+  const takes = [
       {
           id: 1,
-          name: "Dave",
+          take: "Hello",
       }
   ]  
-  const takes = [
-    {
-        id: 3,
-        take: "No good"
-    }
-  ]
   
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
-        <Router><Commentator takes={takes} commentator={commentator}/></Router>, div
+        <Router><HomeTakesItem takes={takes}/></Router>, div
     );
     ReactDOM.unmountComponentAtNode(div);
   })

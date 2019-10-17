@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom';
-import Commentator from './Commentator'
+import CommentatorPage from './CommentatorPage'
 
-describe(`Commentator Component`, () => {
-  const commentator = [
+describe(`CommentatorPage Component`, () => {
+  const commentators = [
       {
           id: 1,
           name: "Dave",
@@ -16,11 +16,10 @@ describe(`Commentator Component`, () => {
         take: "No good"
     }
   ]
-  
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
-        <Router><Commentator takes={takes} commentator={commentator}/></Router>, div
+        <Router><CommentatorPage takes={takes} commentators={commentators}/></Router>, div
     );
     ReactDOM.unmountComponentAtNode(div);
   })

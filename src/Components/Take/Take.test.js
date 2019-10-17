@@ -1,16 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom';
-import Commentator from './Commentator'
+import Take from './Take'
 
-describe(`Commentator Component`, () => {
-  const commentator = [
-      {
-          id: 1,
-          name: "Dave",
-      }
-  ]  
-  const takes = [
+describe(`Take Component`, () => {
+  const take = [
     {
         id: 3,
         take: "No good"
@@ -20,7 +14,7 @@ describe(`Commentator Component`, () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
-        <Router><Commentator takes={takes} commentator={commentator}/></Router>, div
+        <Router><Take take={take}/></Router>, div
     );
     ReactDOM.unmountComponentAtNode(div);
   })

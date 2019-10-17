@@ -6,7 +6,7 @@ function Take() {
     return (
         <main className='Take'>
             <h2>
-                Bill Simmons  - 10/13/19 - The Celtics will win by 25 points. <span class="false">False</span>
+                Bill Simmons  - 10/13/19 - The Celtics will win by 25 points. <span className="false">False</span>
             </h2>
       </main>
     );

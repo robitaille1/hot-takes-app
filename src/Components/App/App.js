@@ -1,12 +1,12 @@
 import React, { Component }from 'react'
 import { Route } from 'react-router-dom'
-import LandingPage from './Components/LandingPage/LandingPage'
-import HomePage from './Components/HomePage/HomePage'
-import AddTakeForm from './Components/AddTakeForm/AddTakeForm'
-import AddCommentatorForm from './Components/AddCommentatorForm/AddCommentatorForm'
-import CommentatorPage from './Components/CommentatorPage/CommentatorPage';
-import ApiContext from '../src/ApiContext'
-import config from '../src/config'
+import LandingPage from '../LandingPage/LandingPage'
+import HomePage from '../HomePage/HomePage'
+import AddTakeForm from '../AddTakeForm/AddTakeForm'
+import AddCommentatorForm from '../AddCommentatorForm/AddCommentatorForm'
+import CommentatorPage from '../CommentatorPage/CommentatorPage';
+import ApiContext from '../../ApiContext'
+import config from '../../config'
 
 class App extends Component {
   state = {
