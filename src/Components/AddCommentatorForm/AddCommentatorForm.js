@@ -32,7 +32,6 @@ export default class AddCommentatorForm extends Component {
             .then(res => {
                 if (!res.ok)
                 return res.json().then(event => Promise.reject(event))
-                return res.json()
             })
             .then(commentator => {
                 this.context.addCommentator(commentator)

@@ -77,22 +77,28 @@ export default class Commentator extends React.Component {
                                   {this.props.commentator.about}
                               </p>
                               <h4 className="score">Hot Takes Score: <span className="medium">{this.calculateScore()}</span></h4>
-                              <Link to='/add-take' style={{ textDecoration: 'none' }}>
-                                  <button 
+                              <Link to={`/edit/${this.props.commentator.id}`} style={{ textDecoration: 'none' }}>
+                                <button 
                                     className="new-tk-btn">
-                                        Add New Take
-                                  </button>
-                                  <button 
+                                    Edit Commentator
+                                </button>
+                              </Link>
+                              <button 
                                     className="comm-delete-btn"
                                     type="button"
                                     onClick={this.handleDeleteCommentator}>
                                     Delete Commentator    
-                                  </button>
-                              </Link>
+                            </button>
                           </div>
                       </div>
                   </section>
                   <section className="comment-takes">
+                    <Link to='/add-take' style={{ textDecoration: 'none' }}>
+                        <button 
+                        className="new-tk-btn">
+                            Add New Take
+                        </button>
+                    </Link>
                   <ul>
                   {this.props.takes.map(take => 
                       <CommentatorTakes 
