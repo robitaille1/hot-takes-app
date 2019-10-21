@@ -10,9 +10,9 @@ import './Commentator.css'
 export default class Commentator extends React.Component {
     static defaultProps ={
         onDeleteCommentator: () => {},
-      }
+    }
       
-      static contextType = ApiContext;
+    static contextType = ApiContext;
 
 
     handleDeleteCommentator = e => {
@@ -46,7 +46,7 @@ export default class Commentator extends React.Component {
                 takesCorrect++;
             };
         }
-        const score = (takesCorrect/takeTotal)*100;
+        const score = Math.round((takesCorrect/takeTotal)*100);
         if(isNaN(score)){
             return 0
         } else {
@@ -55,13 +55,14 @@ export default class Commentator extends React.Component {
     }
 
     render() {
+        this.props.takes.sort((a, b) => (a.id < b.id) ? 1 : -1)
         return (
             <main className='Commentator'>
                 <Nav />
                   <div className="container">
                   <section className="comment-main">
-                      <div className="content comment-main">
-                          <h2 className="section-title">
+                      <div className="comm-content comment-main">
+                          <h2 className="cmm-name">
                               {this.props.commentator.name}
                           </h2>
                           <div className="comment-content">
@@ -76,13 +77,7 @@ export default class Commentator extends React.Component {
                               <p>
                                   {this.props.commentator.about}
                               </p>
-                              <h4 className="score">Hot Takes Score: <span className="medium">{this.calculateScore()}</span></h4>
-                              <Link to={`/edit/${this.props.commentator.id}`} style={{ textDecoration: 'none' }}>
-                                <button 
-                                    className="new-tk-btn">
-                                    Edit Commentator
-                                </button>
-                              </Link>
+                              <h4 className="score">Hot Takes Score: <span className={this.calculateScore() > 60? "true": " false"}>{this.calculateScore()}</span></h4>
                               <button 
                                     className="comm-delete-btn"
                                     type="button"
@@ -93,12 +88,7 @@ export default class Commentator extends React.Component {
                       </div>
                   </section>
                   <section className="comment-takes">
-                    <Link to='/add-take' style={{ textDecoration: 'none' }}>
-                        <button 
-                        className="new-tk-btn">
-                            Add New Take
-                        </button>
-                    </Link>
+                  <h2 className='takes-section-title'>Takes</h2>
                   <ul>
                   {this.props.takes.map(take => 
                       <CommentatorTakes 
@@ -107,6 +97,12 @@ export default class Commentator extends React.Component {
                        />
                   )}
                   </ul>
+                  <Link to='/add-take' style={{ textDecoration: 'none' }}>
+                    <button 
+                    className="new-tk-btn">
+                        Add New Take
+                    </button>
+                </Link>
                   </section>
               </div>
             </main>

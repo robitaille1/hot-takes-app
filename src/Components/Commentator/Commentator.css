@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  padding: 0 100px;
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -41,23 +41,15 @@ ul {
 }
 
 .comment-main {
-    width: 100%;
-    font-size: 14px;
-    color: antiquewhite;
-    border-radius: 10px;
-    background-color: rgba(58, 56, 56, 0.336);
-}
-  
-.medium {
-  color: greenyellow;
-}
-  
-.takes {
-  border: 1px solid rgba(170, 168, 168, 0.507);
+  width: 100%;
+  font-size: 14px;
   border-radius: 10px;
-  margin: 3px;
-  font-size: 13px;
 }
+  
+.cmm-name {
+  font-size: 30px;
+}
+  
 
 .score {
   font-size: 24px;
@@ -69,10 +61,14 @@ ul {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 15px;
-  border: 1px solid black;
   padding: 5px;
   border-radius: 5px;
-  background-color:rgba(0, 0, 0, 0.384);
+  background-color:rgba(0, 0, 0, 0.349);
+}
+
+.social-link:hover {
+  background-color:rgba(0, 0, 0, 0.651);
+  transition: 0.5s;
 }
 
 .network {
@@ -80,7 +76,7 @@ ul {
 }
 
 .new-tk-btn {
-  margin: 5px 5px;
+  margin: 10px 5px;
   display: inline;
   border: none;
   color: white;
@@ -105,8 +101,51 @@ ul {
   padding: 10px 20px;
   opacity: 0.6;
   transition: 0.5s;
+  font-size: 10px;
 }
 
 .comm-delete-btn:hover {
   opacity: 1;
 }
+
+.comment-takes {
+  margin: 20px 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(138, 137, 137, 0.288);
+}
+
+.takes-section-title{
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(36, 35, 35);
+}
+
+.comm-content {
+  margin: 5px auto;
+  min-height: 300px;
+  width: 100%;
+  padding: 20px;
+  border: 3px solid rgba(170, 168, 168, 0.507);
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+  background: white;
+  box-shadow: 0 0 15px rgba(138, 137, 137, 0.288);
+  display: table; text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .comment-main {
+    margin: auto;
+  }
+  .comm-delete-btn {
+    font-size: 13px;
+  }
+  .container{
+    margin: 0px 100px;
+  }
+  .comm-content{
+    padding: 20px 100px;
+  }
+}
+
