@@ -1,19 +1,19 @@
-* {
-    box-sizing: border-box;
+
+
+fieldset {
+  border: 1px solid rgba(170, 168, 168, 0.507);
+  border-radius: 10px;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  background: white;
 }
 
-body {
-  font-family: "Open Sans",
-  sans-serif; 
-  font-size: 20px;
-  color: #444;
+.form-container {
   text-align: center;
-  line-height: 1.5;
-}
-
-.container {
-  padding: 0 100px;
-  text-align: center;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(138, 137, 137, 0.288);
 }
 
 button {
@@ -22,8 +22,55 @@ button {
 
 .form-section {
     display: block;
-  }
-  
+    width: 50%;
+    margin-bottom: 15px;
+}
+
 .form-btn {
-    padding: 5px 10px;
+  display: inline;
+  margin-right: 25px;
+  border: none;
+  color: white;
+  background-color: rgb(252, 0, 0);
+  border: 1px solid red;
+  padding: 10px 20px;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.form-btn:hover {
+  opacity: 1;
+}
+
+label {
+  margin-right: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+#about{
+  height: 100px;
+  width: 140px;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  fieldset {
+    text-align: center;
+  }
+  .form-section {
+    display: block;
+    margin: 10px auto;
+}
+  .container {
+    padding: 0 100px;
+    text-align: center;
+  }
+
+  #about{
+    height: 212px;
+    width: 360px;
+  }
 }

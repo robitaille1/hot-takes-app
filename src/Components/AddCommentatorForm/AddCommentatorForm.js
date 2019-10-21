@@ -12,7 +12,6 @@ export default class AddCommentatorForm extends Component {
         },
     }
     static contextType = ApiContext
-
     submitForm = (event) => {
         event.preventDefault();
         const newCommentator = {
@@ -31,7 +30,8 @@ export default class AddCommentatorForm extends Component {
         })
             .then(res => {
                 if (!res.ok)
-                return res.json().then(event => Promise.reject(event))
+                    return res.json().then(event => Promise.reject(event))
+                return res.json()
             })
             .then(commentator => {
                 this.context.addCommentator(commentator)
@@ -41,13 +41,14 @@ export default class AddCommentatorForm extends Component {
                 console.error({ error })
             })
     }
-
-
+    handleClickCancel = () => {
+        this.props.history.push(`/home`)
+    };
     render() {
         return (
             <main className='AddCommentatorForm'>
                 <Nav />
-                <section className="container">
+                <section className="form-container">
                   <form onSubmit={this.submitForm}>
                       <fieldset>
                           <div className="form-section">
@@ -70,12 +71,13 @@ export default class AddCommentatorForm extends Component {
                               <label className="about-label" htmlFor="about">About:</label>
                               <textarea name="about" id="about" cols="30" rows="10"></textarea>
                           </div>
-                          <button className="form-btn">Submit</button>
+                          <button type='submit' className="form-btn">Submit</button>
+                          <button type='button' onClick={this.handleClickCancel} className="form-btn cancel">Cancel</button>
                       </fieldset>
                   </form>
               </section>
             </main>
-          );
+        );
     }
   }
   
