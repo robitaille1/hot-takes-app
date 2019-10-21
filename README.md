@@ -23,7 +23,7 @@ If you don't see a commentator that you are looking for, add them! The more comm
 ### Add a Take
 Add Takes to a commentator in order to keep their score up to date. If someone said something ridiculous, add it! Likewise, if someone said something reasonable, add that too!
 
-![Hot Takes Add Take Screen](screenshots/AddTake.PNG)
+![Hot Takes Add Take Screen](screenshots/AddTake1.PNG)
 
 ## Tech Used
 This application was made using:
