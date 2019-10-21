@@ -13,12 +13,12 @@ I created Hot Takes with the intention of it becoming something similar to Rotto
 
 This app assists in keeping track of what commentators say and their predictions made. It provides each commentator with a hot takes score, to easily show the use who the most reliable commentator is.
 
-![Hot Takes Home Screen](screenshots\Home.PNG)
+![Hot Takes Home Screen](screenshots/Home.PNG)
 
 ### Add a Commentator
 If you don't see a commentator that you are looking for, add them! The more commentators the merrier. 
 
-![Hot Takes Add Commentator Screen](screenshots\AddComm.PNG)
+![Hot Takes Add Commentator Screen](screenshots/AddComm.PNG)
 
 ### Add a Take
 Add Takes to a commentator in order to keep their score up to date. If someone said something ridiculous, add it! Likewise, if someone said something reasonable, add that too!
