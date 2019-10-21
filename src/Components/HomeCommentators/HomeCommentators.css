@@ -1,0 +1,25 @@
+.commentators-title{
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(36, 35, 35);
+  font-size: 30px;
+}
+
+.new-comm-btn {
+  margin: 30px auto;
+  display: block;
+  border: none;
+  color: white;
+  background-color: rgb(6, 145, 59);
+  border: 1px solid rgba(6, 145, 59);
+  padding: 10px 20px;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 600px) {
+  .commentators-title{
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(36, 35, 35);
+    font-size: 35px;
+  }
+}

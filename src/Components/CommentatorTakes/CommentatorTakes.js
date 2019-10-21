@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import config from '../../config'
 import ApiContext from '../../ApiContext'
+import './CommentatorTakes.css'
 
 class CommentatorTakes extends Component {
     static defaultProps ={
@@ -32,11 +33,11 @@ class CommentatorTakes extends Component {
 
     render() {
         return(
-            <li className='take-object takes' key={this.props.take.id}>
+            <li className={this.props.take.correct === 'TRUE'? 'take-object takes correct' : 'take-object takes incorrect' } key={this.props.take.id}>
                 <h2>
-                    {this.props.take.date} - {this.props.take.take} - <span>{this.props.take.correct}</span>
+                    {this.props.take.take} - <span>{this.props.take.correct}</span>
                     <button 
-                        className='comm-delete-btn' 
+                        className='tk-delete-btn' 
                         type='button' 
                         onClick={this.handleDeleteTake}>
                             Delete

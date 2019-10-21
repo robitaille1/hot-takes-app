@@ -13,5 +13,7 @@ body {
 
 .nav-title {
     color: red;
-    font-size: 2rem;
-  }
+    margin: 10px;
+    font-size: 2.5rem;
+    font-family: 'Permanent Marker', cursive;
+}

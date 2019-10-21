@@ -2,7 +2,7 @@ import React from 'react'
 import Commentator from '../Commentator/Commentator'
 import ApiContext from '../../ApiContext'
 import { findCommentator, getTakesForCommentator } from '../../commentators-helpers'
-// import CommentatorError from '../CommentatorError/CommentatorError'
+import CommentatorError from '../CommentatorError/CommentatorError'
 
 export default class CommentatorPage extends React.Component {
   static defaultProps = {
@@ -24,19 +24,19 @@ export default class CommentatorPage extends React.Component {
     const { commentators=[] } = this.context
     const { takes=[] } = this.context
     const { commentatorId } = this.props.match.params
-    const commentator = findCommentator(commentators, commentatorId) || { content: '' }
+    const commentator = findCommentator(commentators, commentatorId) || null
     const commentatorTakes = getTakesForCommentator(takes, commentatorId)
     return (
       <section className='Commentator'>
-        {/* <CommentatorError> */}
-            <Commentator
+        {commentator ===  null ? 
+        <CommentatorError /> : 
+        <Commentator
               id={commentator.id}
               commentator={commentator}
               takes={commentatorTakes}
               onDeleteCommentator={this.handleDeleteCommentator}
               onDeleteTake={this.handleDeleteTake}
-            />
-        {/* </CommentatorError> */}
+        />} 
       </section>
     )
   }

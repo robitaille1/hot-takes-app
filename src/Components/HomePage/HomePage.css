@@ -1,15 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-  font-family: "Open Sans",
-  sans-serif; 
-  font-size: 20px;
-  color: #444;
-  text-align: center;
-  line-height: 1.5;
-}
 
 h2 {
   margin: 5px;
@@ -35,69 +23,55 @@ ul {
   color: #444;
 }
 
-.container {
-  padding: 0 100px;
+.home-container {
+  width: 100%;
+  padding: 0 25px;
   text-align: center;
 }
 
-.true {
-  color: green;
-}
-
-.false {
-  color: red;
-}
-
 .home-main {
+    display: block;
+    border-radius: 10px;
+}
+
+.new-btn:hover {
+  opacity: 1;
+}
+  
+.content {
+  margin: 5px auto;
+  min-height: 300px;
+  width: 100%;
+  padding: 20px;
+  border: 3px solid rgba(170, 168, 168, 0.507);
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+  background: white;
+  box-shadow: 0 0 15px rgba(138, 137, 137, 0.288);
+  display: table; text-align: center;
+}
+  
+@media screen and (min-width: 600px) {
+  .home-main {
     display: flex;
     border-radius: 10px;
   }
-  
-  .content {
-    margin: 5px auto;
-    min-height: 300px;
-    width: 500px;
-    padding: 20px;
-    border: 1px solid rgba(170, 168, 168, 0.507);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
   .new-btn {
     display: inline;
     margin: 30px 200px;
-    border: none;
-    color: white;
-    background-color: rgb(252, 0, 0);
-    border: 1px solid red;
     padding: 10px 20px;
-    opacity: 0.6;
-    transition: 0.5s;
   }
+  .content {
+    margin: 5px 20px;
+  }
+}
 
-  .new-btn:hover {
-    opacity: 1;
+@-moz-document url-prefix() {
+  @media screen and (min-width:600px) {
+    .content {
+      width: 48%;
+      margin: 5px auto;
+    }
   }
-  
-  .take-object {
-    font-size: 10px;
-    background-color: white;
-    border: 1px solid rgba(170, 168, 168, 0.507);
-    border-radius: 5px;
-    margin-top: 3px
-  }
-  
-  .commentator {
-    display: inline-block;
-    min-height: 75px;
-    width: 90px;
-    background-color: white;
-    margin: 5px;
-    border: 1px solid rgba(170, 168, 168, 0.507);
-    border-radius: 5px;
-  }
-  
-  .section-title {
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
+}

@@ -5,7 +5,8 @@ import HomePage from '../HomePage/HomePage'
 import AddTakeForm from '../AddTakeForm/AddTakeForm'
 import AddCommentatorForm from '../AddCommentatorForm/AddCommentatorForm'
 import CommentatorPage from '../CommentatorPage/CommentatorPage'
-import EditCommentator from '../EditCommentator/EditCommentator'
+// import EditCommentator from '../EditCommentator/EditCommentator'
+import Edit from '../Edit/Edit'
 import ApiContext from '../../ApiContext'
 import config from '../../config'
 
@@ -106,7 +107,6 @@ class App extends Component {
     }
 
 
-
   render() {
     const value = {
         takes: this.state.takes,
@@ -122,10 +122,13 @@ class App extends Component {
             <main className='App'>
                 <Route exact path='/' component={LandingPage}/>
                 {this.renderRoutes()}
+                {this.renderCommentatorRoutes()}
                 <Route path='/add-take' component={AddTakeForm}/>
                 <Route path='/add-commentator' component={AddCommentatorForm}/>
-                <Route path='/edit/:commentatorId' component={EditCommentator}/>
-                {this.renderCommentatorRoutes()}
+                {/* <Route path='/edit/:commentatorId' render={(props) => <EditCommentator {...props} commentators={this.state.commentators} />}/>
+                {this.renderCommentatorRoutes()} */}
+                <Route exact path='/edit/:commentatorId' component={Edit}/>
+
             </main>
         </ApiContext.Provider>
     );

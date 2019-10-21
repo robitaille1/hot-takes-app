@@ -1,0 +1,15 @@
+.commentator {
+  text-align: center;
+  display: inline-block;
+  min-height: 75px;
+  width: 90px;
+  background-color: white;
+  margin: 5px;
+  border: 1px solid rgba(170, 168, 168, 0.507);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(138, 137, 137, 0.199);
+}
+
+.new-comm-btn:hover {
+  opacity: 1;
+}

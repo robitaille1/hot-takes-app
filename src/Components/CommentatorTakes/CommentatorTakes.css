@@ -1,0 +1,34 @@
+.tk-delete-btn{
+    margin-left: 15px;
+    border: none;
+    color: white;
+    background-color: rgb(252, 0, 0);
+    border: 1px solid red;
+    padding: 5px 5px;
+    opacity: 0.6;
+    transition: 0.5s;
+    font-size: 10px;
+}
+
+.tk-delete-btn:hover {
+    opacity: 1;
+}
+
+.takes {
+    border: 1px solid rgba(170, 168, 168, 0.507);
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 13px;
+}
+
+.correct {
+    border: 2px solid rgba(4, 163, 25, 0.507);
+    background: rgba(57, 221, 79, 0.514);
+    color: rgb(0, 0, 0)
+}
+
+.incorrect {
+    border: 2px solid rgba(163, 4, 4, 0.507);
+    background: rgba(221, 57, 57, 0.397);
+    color: rgb(0, 0, 0)
+}
