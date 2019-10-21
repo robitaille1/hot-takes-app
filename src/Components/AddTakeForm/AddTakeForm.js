@@ -21,7 +21,6 @@ export default class AddTakeForm extends Component {
         const idForCommentator = findCommentatorId(commentators, event.target['commentator'].value);
         const newTake = {
           take: event.target['take'].value,
-          date: event.target['date'].value,
           commentatorid: idForCommentator.id,
           commentator: event.target['commentator'].value,
           correct: event.target['correct'].value,
@@ -48,18 +47,18 @@ export default class AddTakeForm extends Component {
           })
     }
 
+    handleClickCancel = () => {
+      this.props.history.push(`/home`)
+    };
+
     render() {
       const { commentators=[] } = this.context
         return (
             <main className='AddTakeForm'>
                 <Nav />
-                <section className="container">
+                <section className="form-container">
                   <form onSubmit={this.handleSubmit}>
                       <fieldset>
-                          <div className="form-section">
-                              <label htmlFor="date">Date:</label>
-                              <input type="date" name="date" id="date" />
-                          </div>
                           <div className="form-section">
                               <label htmlFor="commentator">Select a Commentator:</label>
                               <select name="commentator" id="commentatorName">
@@ -68,8 +67,8 @@ export default class AddTakeForm extends Component {
                                 )}
                               </select>
                           </div>
+                          <label className="take-label"htmlFor="take">Take Information:</label>
                           <div className="form-section">
-                              <label className="take-label"htmlFor="take">Take Information:</label>
                               <textarea name="take" id="take" cols="30" rows="10"></textarea>
                           </div>
                           <div className="form-section">
@@ -79,22 +78,26 @@ export default class AddTakeForm extends Component {
                                   <option value="NFL">NFL</option>
                                   <option value="MLB">MLB</option>
                                   <option value="NHL">NHL</option>
+                                  <option value="NHL">CFB</option>
+                                  <option value="NHL">CBB</option>
+                                  <option value="NHL">MLS</option>
+                                  <option value="NHL">EPL</option>
                               </select>
                           </div>
                           <div className="form-section">
-                              <label htmlFor="correct">Correct or Incorrect?</label>
+                              <label htmlFor="correct">Correct?</label>
                               <select name="correct" id="correct">
                                   <option value="TRUE">TRUE</option>
                                   <option value="FALSE">FALSE</option>
                               </select>
                           </div>
-                          <button className="form-btn">Submit</button>
+                          <button type='submit'className="form-btn">Submit</button>
+                          <button type='button' onClick={this.handleClickCancel} className="form-btn cancel">Cancel</button>
                       </fieldset>
                   </form>
               </section>
             </main>
           );
-    }
-    
+        }
   }
   

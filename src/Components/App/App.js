@@ -5,8 +5,6 @@ import HomePage from '../HomePage/HomePage'
 import AddTakeForm from '../AddTakeForm/AddTakeForm'
 import AddCommentatorForm from '../AddCommentatorForm/AddCommentatorForm'
 import CommentatorPage from '../CommentatorPage/CommentatorPage'
-// import EditCommentator from '../EditCommentator/EditCommentator'
-import Edit from '../Edit/Edit'
 import ApiContext from '../../ApiContext'
 import config from '../../config'
 
@@ -67,14 +65,6 @@ class App extends Component {
         })
     }
 
-    handleUpdateCommentator = updatedCommentator => {
-        this.setState({
-            commentators: this.state.commentators.map(cm =>
-              (cm.id !== updatedCommentator.id) ? cm : updatedCommentator
-            )
-          })  
-    }
-
 
     renderRoutes() {
         return (
@@ -115,7 +105,6 @@ class App extends Component {
         deleteCommentator: this.handleDeleteCommentator,
         addTake: this.handleAddTake,
         deleteTake: this.handleDeleteTake,
-        updateCommentator: this.handleUpdateCommentator
     };
     return (
         <ApiContext.Provider value={value}>
@@ -125,10 +114,6 @@ class App extends Component {
                 {this.renderCommentatorRoutes()}
                 <Route path='/add-take' component={AddTakeForm}/>
                 <Route path='/add-commentator' component={AddCommentatorForm}/>
-                {/* <Route path='/edit/:commentatorId' render={(props) => <EditCommentator {...props} commentators={this.state.commentators} />}/>
-                {this.renderCommentatorRoutes()} */}
-                <Route exact path='/edit/:commentatorId' component={Edit}/>
-
             </main>
         </ApiContext.Provider>
     );

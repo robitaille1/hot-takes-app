@@ -53,7 +53,7 @@ export default class AddCommentatorForm extends Component {
                       <fieldset>
                           <div className="form-section">
                               <label htmlFor="date">Name:</label>
-                              <input type="text" name="name" id="name" />
+                              <input type="text" name="name" id="name" required />
                           </div>
                           <div className="form-section">
                               <label htmlFor="commentator">Network:</label>

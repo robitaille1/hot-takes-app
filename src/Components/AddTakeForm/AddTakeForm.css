@@ -1,24 +1,19 @@
-* {
-    box-sizing: border-box;
-}
 
-body {
-  font-family: "Open Sans",
-  sans-serif; 
-  font-size: 20px;
-  color: #444;
-  text-align: center;
-  line-height: 1.5;
-}
 
 fieldset {
   border: 1px solid rgba(170, 168, 168, 0.507);
   border-radius: 10px;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  background: white;
+  padding: 10px;
 }
 
-.container {
-  padding: 0 100px;
+.form-container {
   text-align: center;
+  width: 90%;
+  margin: auto;
 }
 
 button {
@@ -27,11 +22,13 @@ button {
 
 .form-section {
     display: block;
+    width: 50%;
+    margin-bottom: 15px;
 }
 
 .form-btn {
   display: inline;
-  margin: 30px 200px;
+  margin-right: 25px;
   border: none;
   color: white;
   background-color: rgb(252, 0, 0);
@@ -43,4 +40,36 @@ button {
 
 .form-btn:hover {
   opacity: 1;
+}
+
+label {
+  margin-right: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+#take{
+  height: 100px;
+  width: 250px;
+}
+
+@media screen and (min-width: 600px) {
+  fieldset {
+    text-align: center;
+  }
+  .form-section {
+    display: block;
+    margin: 10px auto;
+}
+  .container {
+    padding: 0 100px;
+    text-align: center;
+  }
+
+  #take{
+    height: 212px;
+    width: 360px;
+  }
 }

@@ -7,5 +7,4 @@ export default React.createContext({
   addTake: () => {},
   deleteTake: () => {},
   deleteCommentator: () => {},
-  updateCommentator: () => {},
 })
