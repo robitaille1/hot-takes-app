@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
+import Nav from '../Nav/Nav'
+import './CommentatorError.css'
 
-class CommentatorError extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          hasError: false
-        };
-      }
-    static getDerivedStateFromError(error){
-        return { hasError: true}
-    }
+export default class CommentatorError extends Component {
     render() {
-        if (this.state.hasError) {
-            return(
-                <h2>Could Not Find this Commentator</h2>
-            );
-        }
-        return this.props.children
+        return(
+            <main className='CommentatorError'>
+                <Nav />
+                <h2 className='error'>Could Not Find Commentator</h2>
+            </main>
+        ) 
     }
 }
-
-export default CommentatorError;
