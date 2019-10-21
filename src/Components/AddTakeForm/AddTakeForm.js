@@ -69,7 +69,7 @@ export default class AddTakeForm extends Component {
                           </div>
                           <label className="take-label"htmlFor="take">Take Information:</label>
                           <div className="form-section">
-                              <textarea name="take" id="take" cols="30" rows="10"></textarea>
+                              <textarea name="take" id="take" cols="30" rows="10" required></textarea>
                           </div>
                           <div className="form-section">
                               <label htmlFor="sport">Sport:</label>
