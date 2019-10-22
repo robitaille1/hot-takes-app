@@ -24,9 +24,9 @@ function LandingPage() {
             </div>
             
 
-            <h3 className='header'>The Rotton Tomatos of sports commentary</h3>
+            <h3 className='header'>The Rotten Tomatos of sports commentary</h3>
             <p className='description'>
-                Sports Commentators have many hot takes, but there is no where to follow whether they are right or wrong. Hot Takes is an app to keep track of what commentators say, and show who is the most reliable.
+                Sports Commentators have many hot takes, but there is nowhere to follow whether they are right or wrong. Hot Takes is an app to keep track of what commentators say, and show who is the most reliable.
             </p>
             <h3 className='header'>Add A Commentator</h3>
             <p className='description'>
@@ -34,7 +34,7 @@ function LandingPage() {
             </p>
             <h3 className='header'>Add A Take</h3>
             <p className='description'>
-                Add your takes to a commentator in order to keep them honest. We want users to know who is the most reliable commentators are and who is just a hot take artist. Takes can be as simple or complex as you'd like, as long as the take is provable as a correct or incorrect.
+                Add your takes to a commentator in order to keep them honest. We want users to know who the most reliable commentators are and who is just a hot take artist. Takes can be as simple or complex as you'd like, as long as the take is provable as a correct or incorrect.
             </p>
             </div>
       </main>
