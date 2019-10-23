@@ -9,6 +9,10 @@ fieldset {
   background: white;
 }
 
+input {
+  border: 1px solid #CCCCCC !important;
+}
+
 .form-container {
   text-align: center;
   width: 90%;
@@ -48,6 +52,7 @@ label {
 
 textarea {
   resize: none;
+  border: 1px solid #CCCCCC !important;
 }
 
 #about{
